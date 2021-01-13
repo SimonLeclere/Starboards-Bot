@@ -1,0 +1,15 @@
+{
+  "name": "starbot",
+  "version": "1.0.0",
+  "description": "An example of use of the discord-starboards module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ."
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "discord-starboards": "git+https://github.com/SimonLeclere/discord-starboards.git#develop",
+    "discord.js": "^12.5.1"
+  }
+}
