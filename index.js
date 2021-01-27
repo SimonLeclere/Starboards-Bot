@@ -6,7 +6,6 @@ const client = new Discord.Client();
 const config = require('./config.json');
 client.config = config;
 
-// Init discord giveaways
 const StarboardsManager = require('discord-starboards');
 const manager = new StarboardsManager(client, {
     storage: './starboards.json',
