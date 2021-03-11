@@ -70,7 +70,6 @@ manager.on('starboardAlreadyStarred', (emoji, message, user) => {
 manager.on('starboardNoEmptyMsg', (emoji, message, user) => {
     message.channel.send(`${user.username}, you cannot star an empty message.`)
 });
-<<<<<<< HEAD
 
 
 
@@ -106,5 +105,3 @@ manager.on('starboardEdited', (old, updated) => {
     if(channel) return channel.send(embed);
 
 })
-=======
->>>>>>> 883781b718039a94f33798f5a6c1aad66b25c334
