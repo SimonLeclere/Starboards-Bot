@@ -5,6 +5,12 @@ exports.run = async (client, message, args) => {
         return message.channel.send(':x: You need to have the manage channel permissions to create a starboard.');
     }
 
+    
+    if(client.starboardsManager.starboards.find(s => s.guildID === message.guild.id)) {
+        return message.channel.send('There is already a starboard on this server!');
+    }
+
+
     // Emoji
     let emoji = client.config.defaultEmoji;
     if(args[0]) emoji = args[0];
@@ -13,5 +19,5 @@ exports.run = async (client, message, args) => {
         return message.channel.send(`There is already a starboard on this server with the emoji ${emoji}`)
     }
 
-    client.starboardsManager.create(message.channel, { emoji: emoji })
+    client.starboardsManager.create(message.channel, { emoji: emoji, selfStar: false, starBotMsg: false })
 };
