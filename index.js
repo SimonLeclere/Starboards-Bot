@@ -6,7 +6,7 @@ const client = new Discord.Client();
 const config = require('./config.json');
 client.config = config;
 
-const StarboardsManager = require('discord-starboards');
+const StarboardsManager = require('./StarboardsManager');
 const manager = new StarboardsManager(client, {
     storage: false,
 });

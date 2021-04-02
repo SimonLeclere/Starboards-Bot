@@ -15,9 +15,11 @@ exports.run = async (client, message, args) => {
     let emoji = client.config.defaultEmoji;
     if(args[0]) emoji = args[0];
 
+    let threshold = args[1] || 1;
+
     if(client.starboardsManager.starboards.find(s => s.guildID === message.guild.id && s.options.emoji === emoji)) {
         return message.channel.send(`There is already a starboard on this server with the emoji ${emoji}`)
     }
 
-    client.starboardsManager.create(message.channel, { emoji: emoji, selfStar: false, starBotMsg: false })
+    client.starboardsManager.create(message.channel, { emoji: emoji, threshold: threshold })
 };
